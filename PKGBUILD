@@ -3,7 +3,7 @@
 pkgname=privatbank-cryptoplugin
 pkgver=1.2.2
 pkgrel=1
-pkgdesc="PrivatBank (UA) CryptoPlugin for Privat24 internet banking system (It WILL install stuff into your home directory)"
+pkgdesc="PrivatBank (UA) CryptoPlugin for Privat24 internet banking system (You'll have to install BankID CryptoPlugin yourself)"
 url="https://privatbank.ua/"
 arch=('x86_64')
 license=('custom')
