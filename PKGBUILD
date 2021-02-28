@@ -2,9 +2,9 @@
 
 pkgname=privatbank-cryptoplugin
 pkgver=1.2.2
-pkgrel=1
+pkgrel=2
 pkgdesc="PrivatBank (UA) CryptoPlugin for Privat24 internet banking system (You'll have to install BankID CryptoPlugin yourself)"
-url="https://privatbank.ua/"
+url="https://github.com/mister-spock/cryptoplugin"
 arch=('x86_64')
 license=('custom')
 depends=('pcsclite' 'gtk2')
@@ -36,6 +36,7 @@ package() {
     size_bin=$(wc -c ${src_dir}/linux_64/${bin_name} | sed 's/ .*//g')
 
     chromium_dir="${pkgdir}/etc/chromium/native-messaging-hosts"
+    chrome_dir="${pkgdir}/etc/opt/chrome/native-messaging-hosts"
 
     # Install library files
     mkdir -p "${install_dir}"
@@ -50,9 +51,11 @@ package() {
 
     # Create directories for NMAPI
     mkdir -p "${chromium_dir}"
+    mkdir -p "${chrome_dir}"
 
     # Install NMAPI extensions
     install -m 755 "${src_dir}/${manifest_file}" "${chromium_dir}"
+    install -m 755 "${src_dir}/${manifest_file}" "${chrome_dir}"
 
     # Install licenses
     mkdir -p "${license_dir}"
