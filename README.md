@@ -3,9 +3,9 @@ BankID CryptoPlugin for ArchLinux
 
 This package installs BankID CryptoPlugin.
 
-Allows to use keys issued by the Ukrainian key certification centers (IRS, Ministry of Justice, PrivatBank etc.) in Chromium, and Google Chrome browsers.
+Allows to use keys issued by the Ukrainian key certification centers (IRS, Ministry of Justice, PrivatBank etc.) in Chromium, Google Chrome, and Mozilla Firefox browsers.
 
-Works in conjunction with [BankID Extension](https://chrome.google.com/webstore/detail/bankid-cryptoplugin/pgfbdgicjmhenccemcijooffohcdanic), which you'll have to install yourself.
+Works in conjunction with [BankID Extension](https://chrome.google.com/webstore/detail/bankid-cryptoplugin/pgfbdgicjmhenccemcijooffohcdanic), which you'll have to install yourself. For the Firefox extension, use the one that is proposed by the Privat24 app.
 
 ## Install
 

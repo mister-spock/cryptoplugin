@@ -1,0 +1,17 @@
+LIB_DIR="/usr/lib/privatbank-cryptoplugin"
+MOZ_DIR="/usr/lib/mozilla/plugins"
+LIB_NAME="libnpcryptoplugin.so"
+BIN_NAME="nmcryptoplugin"
+
+post_install() {
+    # Create symplinks from library original dir to the Mozilla plugins dir
+    # because that's where Mozilla Manifest files are allowed to point to (?).
+    ln -s "$LIB_DIR/$LIB_NAME" "$MOZ_DIR/$LIB_NAME"
+    ln -s "$LIB_DIR/$BIN_NAME" "$MOZ_DIR/$BIN_NAME"
+}
+
+pre_remove() {
+    # Remove previously created symlinks
+    rm "$MOZ_DIR/$LIB_NAME"
+    rm "$MOZ_DIR/$BIN_NAME"
+}
